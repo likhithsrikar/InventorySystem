@@ -23,17 +23,17 @@ public class Dashboard extends HttpServlet {
       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory_db", "user", "pass");
       Statement stmt = conn.createStatement();
       
-      // Fetch total products
+      
       ResultSet rs1 = stmt.executeQuery("SELECT COUNT(*) FROM products");
       rs1.next();
       request.setAttribute("totalProducts", rs1.getInt(1));
       
-      // Fetch low-stock items
+   
       ResultSet rs2 = stmt.executeQuery("SELECT COUNT(*) FROM products WHERE stock_quantity < min_stock_level");
       rs2.next();
       request.setAttribute("lowStockItems", rs2.getInt(1));
       
-      // Forward to JSP
+ 
       request.getRequestDispatcher("dashboard.jsp").forward(request, response);
       
     } catch (SQLException e) {

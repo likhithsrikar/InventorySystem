@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inventory Dashboard</title>
-  <!-- Bootstrap 5 CSS -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- FontAwesome Icons -->
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Custom CSS -->
+ 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
         <i class="fas fa-bars"></i>
       </button>
       
-      <!-- Brand/Title -->
+     
       <a class="navbar-brand" href="#">
         <i class="fas fa-boxes me-2"></i>Inventory System
       </a>
@@ -168,7 +168,6 @@
               <td>5</td>
               <td>2023-10-05</td>
             </tr>
-            <!-- More rows from DB -->
           </tbody>
         </table>
       </div>
@@ -182,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('sidebarCollapse');
     
-    // Toggle sidebar
+    
     if (toggleButton) {
         toggleButton.addEventListener('click', function(e) {
             e.preventDefault();
@@ -200,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Close sidebar when clicking outside (for desktop)
+    
     document.addEventListener('click', function(e) {
         if (window.innerWidth > 768 && 
             !sidebar.contains(e.target) && 
@@ -210,6 +209,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+<%--
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+
+<script>
+  document.getElementById('sidebarCollapse').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('active');
+  });
+</script>
+</body>
+</html>	--%>
+
 </script>
 </body>
 </html>
